@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      hueRotate: {
+        40: '40deg',
+      },
+    },
   },
   plugins: [],
 }

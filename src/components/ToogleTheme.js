@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { BsSun , BsMoonStars } from "react-icons/bs";
+
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("light");
 
@@ -25,11 +27,8 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-lg border bg-gray-200 dark:bg-gray-800 dark:text-white"
-    >
-      {theme === "light" ? "🌞 Light" : "🌙 Dark"}
+    <button onClick={toggleTheme} className="bg-yellow-200 dark:bg-slate-950 text-black dark:text-white p-2 rounded-full border border-transparent">
+      {theme === "light" ? <BsSun /> : <BsMoonStars  />}
     </button>
   );
 }
